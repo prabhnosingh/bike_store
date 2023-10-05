@@ -124,13 +124,7 @@ namespace BikeStores.MSSQL.Data
                     .HasColumnType("date")
                     .HasColumnName("required_date");
 
-                entity.Property(e => e.ShippedDate)
-                    .HasColumnType("date")
-                    .HasColumnName("shipped_date");
-
-                entity.Property(e => e.StaffId).HasColumnName("staff_id");
-
-                entity.Property(e => e.StoreId).HasColumnName("store_id");
+                //
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Orders)
