@@ -22,6 +22,8 @@ namespace BikeStores.MSSQL.Models
         public string State { get; set; }
         public string ZipCode { get; set; }
 
-        //
+        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Staff> Staff { get; set; }
+        public virtual ICollection<Stock> Stocks { get; set; }
     }
 }
