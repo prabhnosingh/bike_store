@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Tests for the API
 namespace BikeStoreWebApi.Tests.Tests
 {
     [TestFixture]
@@ -60,13 +61,7 @@ namespace BikeStoreWebApi.Tests.Tests
         public async Task GetBrands_Should_Return_List_Of_brand_in_DbAsync()
         {
             //Arrange
-            var listBrannds
-                = new List<Brand>
-                {
-                    new Brand{ BrandId=1,BrandName="Test1",Products=new List<Product>() },
-                    new Brand{ BrandId=2,BrandName="Test2",Products=new List<Product>() },
-                    new Brand{ BrandId=3,BrandName="Test3",Products=new List<Product>() },
-                };
+            
             _dataContext.Brands.AddRange(listBrannds);
             _dataContext.SaveChanges();
 
