@@ -124,15 +124,7 @@ namespace BikeStoreWebApi.Tests.Tests
         public async Task PostBrand_Should_Add_Brand_In_DbAsync()
         {
             //Arrange
-            int brandId = 19;
-            var brand = new Brand
-            {
-                BrandId = brandId,
-                BrandName = "Test",
-            };
-
-            var brandController = new BrandsController(_dataContext, _mockRabbitMQ.Object);
-            _mockRabbitMQ.Setup(x => x.PublishToMessageQueue(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
+            
 
             //Act
             var result = await brandController.PostBrand(brand);
